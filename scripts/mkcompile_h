@@ -75,7 +75,7 @@ UTS_TRUNCATE="cut -b -$UTS_LEN"
 
   LD_VERSION=$($LD -v | head -n1 | sed 's/(compatible with [^)]*)//' \
 		      | sed 's/[[:space:]]*$//')
-  printf '#define LINUX_COMPILER "%s"\n' "$CC_VERSION, $LD_VERSION"
+  printf '#define LINUX_COMPILER "%s"\n' "Android (8028227, based on r445002) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6), LLD 14.0.6 (/buildbot/src/android/llvm-toolchain/out/llvm-project/llvm 4c603efb0cca074e9238af8b4106c30add4418f6)"
 ) > .tmpcompile
 
 # Only replace the real compile.h if the new one is different,
